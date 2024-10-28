@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Button, Flex, Text, TextField } from "@radix-ui/themes";
+import { Button, Flex, Heading, Text, TextField } from "@radix-ui/themes";
 import { DevTool } from "@hookform/devtools";
 import { useForm } from "react-hook-form";
 
@@ -28,15 +28,12 @@ const ReactHookForm = () => {
   };
 
   return (
-    <Flex p={"5"}>
+    <Flex direction={"column"} gap={"5"} align={"center"}>
+      <Heading as="h1" color="red">
+        React Hook Form
+      </Heading>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Flex
-          width={"100%"}
-          mt={"7"}
-          direction={"column"}
-          gap={"4"}
-          align={"center"}
-        >
+        <Flex width={"100%"} direction={"column"} gap={"4"} align={"center"}>
           <TextField.Root
             placeholder="first name"
             size={"3"}
